@@ -1,0 +1,7 @@
+# Berkas sementara sistem operasi
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Log lokal
+*.log
