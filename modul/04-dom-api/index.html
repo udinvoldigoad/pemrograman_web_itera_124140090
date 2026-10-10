@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - DOM &amp; API</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="../index.html">Kembali ke daftar materi</a>
+            <h1>04. DOM &amp; API</h1>
+            <p class="muted">Jalankan lewat Live Server. Fitur post memerlukan koneksi internet.</p>
+            <div class="actions"><button id="toggle-tema" type="button" aria-pressed="false">Aktifkan dark mode</button></div>
+            <p id="storage-error" class="error" role="alert"></p>
+        </header>
+        <div class="grid">
+            <section class="card">
+                <h2>1. Form mahasiswa dan validasi</h2>
+                <form id="form-mahasiswa" novalidate>
+                    <label for="nama">Nama</label>
+                    <input id="nama" maxlength="100" aria-describedby="error-nama" required>
+                    <p id="error-nama" class="error" aria-live="polite"></p>
+                    <label for="nim">NIM</label>
+                    <input id="nim" inputmode="numeric" maxlength="20" aria-describedby="error-nim" required>
+                    <p id="error-nim" class="error" aria-live="polite"></p>
+                    <label for="jurusan">Jurusan</label>
+                    <input id="jurusan" maxlength="100" aria-describedby="error-jurusan" required>
+                    <p id="error-jurusan" class="error" aria-live="polite"></p>
+                    <label for="nilai">Nilai (0-100)</label>
+                    <input id="nilai" type="number" min="0" max="100" step="any" aria-describedby="error-nilai" required>
+                    <p id="error-nilai" class="error" aria-live="polite"></p>
+                    <div class="actions"><button>Tambah mahasiswa</button></div>
+                </form>
+                <p id="status-mahasiswa" class="result" role="status"></p>
+            </section>
+            <section class="card">
+                <h2>2. Penyimpanan mahasiswa</h2>
+                <p>Daftar disimpan dengan JSON.stringify() dan dimuat dengan JSON.parse(). Coba refresh setelah menambah data.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th scope="col">Nama</th><th scope="col">NIM</th><th scope="col">Jurusan</th><th scope="col">Nilai</th><th scope="col">Aksi</th></tr></thead>
+                        <tbody id="daftar-mahasiswa"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="card full">
+                <h2>3. Pencarian post &amp; 5. Pagination API</h2>
+                <p>Post diambil dari JSONPlaceholder menggunakan fetch() dan async/await, lima post per halaman.</p>
+                <button id="muat-post" type="button">Ambil post dari API</button>
+                <label for="cari-post">Cari berdasarkan title</label>
+                <input id="cari-post" type="search" placeholder="Ketik judul post" disabled>
+                <p id="status-api" class="result" role="status">Klik tombol untuk mengambil data.</p>
+                <div id="daftar-post" class="posts"></div>
+                <div class="actions">
+                    <button id="previous" type="button" class="secondary" disabled>Previous</button>
+                    <span id="halaman" aria-live="polite">Halaman 0 dari 0</span>
+                    <button id="next" type="button" class="secondary" disabled>Next</button>
+                </div>
+            </section>
+            <section class="card">
+                <h2>4. Dark mode toggle</h2>
+                <p>Tombol di atas mengubah class <code>dark</code> pada body menggunakan classList.toggle(). Pilihan tema juga disimpan di browser.</p>
+            </section>
+            <section class="card">
+                <h2>6. Todo List</h2>
+                <form id="form-todo">
+                    <label for="todo">Tugas baru</label>
+                    <input id="todo" maxlength="200" required placeholder="Contoh: Belajar JavaScript">
+                    <div class="actions"><button>Tambah tugas</button></div>
+                </form>
+                <p id="status-todo" class="result" role="status"></p>
+                <ul id="daftar-todo" class="todo-list"></ul>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

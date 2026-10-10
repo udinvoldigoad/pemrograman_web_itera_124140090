@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Array &amp; Objek</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="../index.html">Kembali ke daftar materi</a>
+            <h1>03. Array &amp; Objek</h1>
+            <p class="muted">Data awal adalah lima mahasiswa contoh. Perubahan pada materi ini hanya tersimpan selama halaman terbuka.</p>
+        </header>
+        <div class="grid">
+            <section class="card">
+                <h2>5. CRUD mahasiswa</h2>
+                <p>Tambahkan mahasiswa atau klik Edit pada tabel untuk memperbarui data.</p>
+                <form id="form-mahasiswa" novalidate>
+                    <label for="nama">Nama</label><input id="nama" maxlength="100" required>
+                    <label for="nim">NIM</label><input id="nim" inputmode="numeric" maxlength="20" required>
+                    <label for="jurusan">Jurusan</label><input id="jurusan" maxlength="100" required>
+                    <label for="nilai">Nilai (0-100)</label><input id="nilai" type="number" min="0" max="100" step="any" required>
+                    <div class="actions">
+                        <button id="simpan">Tambah mahasiswa</button>
+                        <button id="batal" type="button" class="secondary" hidden>Batal edit</button>
+                    </div>
+                </form>
+                <p id="pesan" class="result" role="status"></p>
+            </section>
+            <section class="card">
+                <h2>2. Nilai tertinggi</h2>
+                <p>Dicari menggunakan reduce().</p>
+                <p id="tertinggi" class="result"></p>
+                <h2>3. Filter di atas rata-rata</h2>
+                <p id="rata-rata"></p>
+                <label for="filter">Tampilkan mahasiswa</label>
+                <select id="filter"><option value="semua">Semua mahasiswa</option><option value="di-atas-rata">Nilai di atas rata-rata</option></select>
+                <h2>4. Pengurutan nama</h2>
+                <label for="urutan">Urutan</label>
+                <select id="urutan"><option value="asc">Nama A-Z (ascending)</option><option value="desc">Nama Z-A (descending)</option></select>
+            </section>
+            <section class="card full">
+                <h2>1. Tabel array objek mahasiswa</h2>
+                <p id="jumlah" class="muted" aria-live="polite"></p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th scope="col">Nama</th><th scope="col">NIM</th><th scope="col">Jurusan</th><th scope="col">Nilai</th><th scope="col">Aksi</th></tr></thead>
+                        <tbody id="daftar-mahasiswa"></tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

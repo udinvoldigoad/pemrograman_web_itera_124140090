@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Variabel &amp; Kondisional</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header><a href="../index.html">Kembali ke daftar materi</a><h1>01. Variabel &amp; Kondisional</h1></header>
+        <div class="grid">
+            <section class="card full">
+                <h2>1. Data diri dengan const dan let</h2>
+                <p id="data-diri" class="result"></p>
+            </section>
+            <section class="card">
+                <h2>2. Pengecekan kelulusan</h2>
+                <p>Lulus jika nilai minimal 70.</p>
+                <form id="form-kelulusan">
+                    <label for="nilai-lulus">Nilai (0-100)</label>
+                    <input id="nilai-lulus" type="number" min="0" max="100" step="any" value="70" required>
+                    <div class="actions"><button>Cek kelulusan</button></div>
+                </form>
+                <p id="hasil-lulus" class="result" aria-live="polite"></p>
+            </section>
+            <section class="card">
+                <h2>3. Kategori umur</h2>
+                <p>Anak: &lt;12, remaja: 12-17, dewasa: 18-59, lansia: ≥60.</p>
+                <form id="form-umur">
+                    <label for="umur">Umur (tahun)</label>
+                    <input id="umur" type="number" min="0" step="1" value="20" required>
+                    <div class="actions"><button>Cek kategori</button></div>
+                </form>
+                <p id="hasil-umur" class="result" aria-live="polite"></p>
+            </section>
+            <section class="card">
+                <h2>4. Nama hari dengan switch-case</h2>
+                <p>Urutan yang digunakan: 1 = Monday sampai 7 = Sunday.</p>
+                <form id="form-hari">
+                    <label for="hari">Angka hari (1-7)</label>
+                    <input id="hari" type="number" min="1" max="7" step="1" value="1" required>
+                    <div class="actions"><button>Konversi hari</button></div>
+                </form>
+                <p id="hasil-hari" class="result" aria-live="polite"></p>
+            </section>
+            <section class="card">
+                <h2>5. Grade dengan ternary operator</h2>
+                <p>A: ≥90, B: ≥80, C: ≥70, D: ≥60, E: &lt;60.</p>
+                <form id="form-grade">
+                    <label for="nilai-grade">Nilai (0-100)</label>
+                    <input id="nilai-grade" type="number" min="0" max="100" step="any" value="85" required>
+                    <div class="actions"><button>Hitung grade</button></div>
+                </form>
+                <p id="hasil-grade" class="result" aria-live="polite"></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

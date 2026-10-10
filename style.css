@@ -1,0 +1,167 @@
+﻿/* Dasar halaman dan warna. */
+* { box-sizing: border-box; }
+
+:root {
+    color-scheme: light;
+    --ink: #182b3b;
+    --muted: #5c6d7b;
+    --accent: #146657;
+    --line: #dce5e9;
+}
+
+body {
+    margin: 0;
+    background: #f1f5f6;
+    color: var(--ink);
+    font: 14px/1.5 Arial, sans-serif;
+}
+
+.container {
+    max-width: 1360px;
+    margin: auto;
+    padding: 12px 24px;
+    display: grid;
+    gap: 10px;
+}
+
+.eyebrow {
+    margin: 0;
+    color: var(--accent);
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 { margin: 4px 0; font-size: 28px; }
+h1 span { font-size: 15px; color: var(--muted); font-weight: normal; }
+h2 { margin: 0 0 8px; font-size: 18px; }
+header > p:last-child { margin: 4px 0 0; }
+header > p:last-child, .muted, footer { color: var(--muted); }
+.muted { margin: 6px 0; font-size: 13px; }
+
+/* Form di kiri, keranjang dan pembayaran di kanan. */
+.layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 18px;
+    min-height: 0;
+}
+
+.card {
+    min-width: 0;
+    padding: 16px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+}
+
+.section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.section-head h2 { margin: 0; }
+.badge {
+    padding: 4px 10px;
+    color: var(--accent);
+    background: #e6f2ee;
+    border-radius: 20px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* Form dan feedback. */
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #b9c8cf;
+    border-radius: 7px;
+    font: inherit;
+}
+
+input:focus { outline: 3px solid #bde6db; border-color: var(--accent); }
+input[aria-invalid="true"] { border-color: #b42318; }
+.error { margin: 4px 0 10px; color: #b42318; font-size: 13px; }
+.error:empty { margin: 0 0 10px; }
+.status { margin: 10px 0 0; color: var(--accent); font-size: 13px; }
+.status:empty, #storage-error:empty { margin: 0; }
+
+button {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 7px;
+    font: inherit;
+    cursor: pointer;
+}
+
+button:focus-visible { outline: 3px solid #92c7ed; outline-offset: 2px; }
+button:hover { filter: brightness(.94); }
+.primary { width: 100%; background: var(--accent); color: white; font-weight: bold; }
+.secondary { margin-top: 4px; border: 1px solid var(--line); background: #f3f6f7; }
+.hapus { padding: 6px 10px; background: #fff0ee; color: #a8291e; font-size: 12px; }
+
+/* Tabel tetap bisa digeser tanpa memotong kolom. */
+.table-wrap { overflow: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { padding: 8px; text-align: left; border-bottom: 1px solid var(--line); }
+th { background: #f6f8f9; color: var(--muted); white-space: nowrap; }
+td:nth-child(3), td:nth-child(4), td:nth-child(5) {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+td:nth-child(2) { overflow-wrap: anywhere; }
+.empty { padding: 8px; text-align: center; color: var(--muted); }
+
+.totals {
+    margin: 4px 0;
+    padding: 6px 12px;
+    background: #f6f9f8;
+    border-radius: 8px;
+}
+
+.totals p { display: flex; justify-content: space-between; gap: 12px; margin: 2px 0; }
+.grand-total { padding-top: 4px; border-top: 1px solid var(--line); font-size: 16px; color: var(--accent); }
+.payment-message { min-height: 21px; margin: 4px 0; font-size: 13px; font-weight: bold; }
+.payment-message.error { color: #b42318; }
+.payment-message.success { color: var(--accent); }
+footer { text-align: center; font-size: 12px; }
+
+/* Desktop: tinggi mengikuti layar, tabel memakai ruang yang tersisa. */
+@media (min-width: 901px) {
+    .container {
+        height: 100dvh;
+        grid-template-rows: auto minmax(0, 1fr) auto;
+    }
+
+    .card { min-height: 0; overflow: auto; }
+    .card[aria-labelledby="judul-keranjang"] { display: flex; flex-direction: column; }
+    .card[aria-labelledby="judul-keranjang"] > * { flex-shrink: 0; }
+    .card[aria-labelledby="judul-keranjang"] > .table-wrap {
+        flex: 1 1 auto;
+        min-height: 80px;
+    }
+    th { position: sticky; top: 0; z-index: 1; }
+    .secondary { align-self: flex-start; }
+}
+
+/* HP dan tablet: satu kolom dengan scroll halaman biasa. */
+@media (max-width: 900px) {
+    .container { padding: 20px 16px; gap: 18px; }
+    .layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 20px 12px; }
+    h1 { font-size: 26px; }
+    .section-head { flex-wrap: wrap; }
+}

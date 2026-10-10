@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Loop &amp; Fungsi</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <header><a href="../index.html">Kembali ke daftar materi</a><h1>02. Loop &amp; Fungsi</h1></header>
+        <div class="grid">
+            <section class="card">
+                <h2>1. Tabel perkalian 1-10</h2>
+                <form id="form-perkalian">
+                    <label for="angka-kali">Angka pilihan</label>
+                    <input id="angka-kali" type="number" min="-1000000" max="1000000" step="any" value="7" required>
+                    <div class="actions"><button>Buat tabel</button></div>
+                </form>
+                <div class="table-wrap result"><table><thead><tr><th>Perkalian</th><th>Hasil</th></tr></thead><tbody id="tabel-perkalian"></tbody></table></div>
+            </section>
+            <section class="card">
+                <h2>2. Faktorial</h2>
+                <p>0! = 1. Input dibatasi 0-18 agar hasil tetap berupa integer presisi dengan tipe Number.</p>
+                <form id="form-faktorial">
+                    <label for="angka-faktorial">Bilangan bulat (0-18)</label>
+                    <input id="angka-faktorial" type="number" min="0" max="18" step="1" value="5" required>
+                    <div class="actions"><button>Hitung faktorial</button></div>
+                </form>
+                <p id="hasil-faktorial" class="result" aria-live="polite"></p>
+            </section>
+            <section class="card">
+                <h2>3. Bilangan prima</h2>
+                <p>Bilangan prima lebih besar dari 1 dan hanya habis dibagi 1 serta dirinya sendiri.</p>
+                <form id="form-prima">
+                    <label for="angka-prima">Bilangan bulat (0-1.000.000.000)</label>
+                    <input id="angka-prima" type="number" min="0" max="1000000000" step="1" value="17" required>
+                    <div class="actions"><button>Cek prima</button></div>
+                </form>
+                <p id="hasil-prima" class="result" aria-live="polite"></p>
+            </section>
+            <section class="card">
+                <h2>4. Kalkulator BMI</h2>
+                <p>Latihan fungsi dan event handler: BMI = berat (kg) / tinggi (m)².</p>
+                <form id="form-bmi">
+                    <label for="berat">Berat badan (kg)</label>
+                    <input id="berat" type="number" min="1" max="1000" step="any" value="60" required>
+                    <label for="tinggi">Tinggi badan (cm)</label>
+                    <input id="tinggi" type="number" min="1" max="300" step="any" value="170" required>
+                    <div class="actions"><button>Hitung BMI</button></div>
+                </form>
+                <p id="hasil-bmi" class="result" aria-live="polite"></p>
+            </section>
+            <section class="card full">
+                <h2>5. FizzBuzz 1-100</h2>
+                <p>Kelipatan 3: Fizz; kelipatan 5: Buzz; kelipatan keduanya: FizzBuzz.</p>
+                <pre id="hasil-fizzbuzz"></pre>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

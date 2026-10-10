@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini POS — Kasir Kantin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="eyebrow">PRAKTIKUM PEMROGRAMAN WEB</p>
+            <h1>Kasir Kantin <span>Mini POS</span></h1>
+            <p>Tambah barang, periksa keranjang, lalu hitung pembayaran.</p>
+        </header>
+
+        <div class="layout">
+            <section class="card" aria-labelledby="judul-form">
+                <h2 id="judul-form">1. Input barang</h2>
+                <p class="muted">Isi harga dalam angka, misalnya 5000.</p>
+
+                <form id="form-barang" novalidate>
+                    <label for="nama">Nama barang</label>
+                    <input id="nama" type="text" placeholder="Contoh: Buku Tulis" aria-describedby="error-nama">
+                    <p id="error-nama" class="error" aria-live="polite"></p>
+                    <label for="harga">Harga satuan (Rp)</label>
+                    <input id="harga" type="number" min="500" step="1" placeholder="5000" aria-describedby="error-harga">
+                    <p id="error-harga" class="error" aria-live="polite"></p>
+                    <label for="qty">Jumlah / Qty</label>
+                    <input id="qty" type="number" min="1" step="1" value="1" aria-describedby="error-qty">
+                    <p id="error-qty" class="error" aria-live="polite"></p>
+                    <button type="submit" class="primary">Tambah ke keranjang</button>
+                </form>
+
+                <p id="status" class="status" role="status"></p>
+                <p id="storage-error" class="error" role="alert"></p>
+            </section>
+
+            <section class="card" aria-labelledby="judul-keranjang">
+                <div class="section-head">
+                    <h2 id="judul-keranjang">2. Keranjang belanja</h2>
+                    <span id="jumlah-item" class="badge">0 barang</span>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th scope="col">No</th><th scope="col">Nama barang</th><th scope="col">Harga satuan</th><th scope="col">Qty</th><th scope="col">Subtotal</th><th scope="col">Aksi</th></tr></thead>
+                        <tbody id="isi-keranjang"></tbody>
+                    </table>
+                </div>
+
+                <p class="muted">Diskon otomatis 10% untuk total belanja minimal Rp50.000.</p>
+
+                <div class="totals" aria-live="polite">
+                    <p><span>Total belanja</span><strong id="total">Rp0</strong></p>
+                    <p><span>Diskon</span><strong id="diskon">Rp0</strong></p>
+                    <p class="grand-total"><span>Total akhir</span><strong id="total-akhir">Rp0</strong></p>
+                </div>
+
+                <h2>3. Pembayaran</h2>
+                <label for="uang-bayar">Uang bayar (Rp)</label>
+                <input id="uang-bayar" type="number" min="0" step="1" placeholder="Masukkan uang yang diterima" aria-describedby="hasil-bayar">
+                <p id="hasil-bayar" class="payment-message" aria-live="polite"></p>
+                <button id="reset" type="button" class="secondary">Transaksi baru / Reset</button>
+            </section>
+        </div>
+        <footer>Keranjang tersimpan di browser ini. Uang bayar tidak disimpan.</footer>
+    </main>
+</body>
+</html>
