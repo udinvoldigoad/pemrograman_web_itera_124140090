@@ -1,0 +1,2 @@
+export const sampleUsers = [ { id: 1, name: 'John', role: 'admin', active: true, age: 28 }, { id: 2, name: 'Jane', role: 'user', active: false, age: 24 }, { id: 3, name: 'Alice', role: 'user', active: true, age: 31 }, { id: 4, name: 'Bob', role: 'admin', active: true, age: 22 } ];
+export const sampleProducts = [ { id: 'P01', name: 'Laptop', price: 15000000, category: 'tech' }, { id: 'P02', name: 'Keyboard', price: 850000, category: 'tech' }, { id: 'P03', name: 'Kursi', price: 2200000, category: 'furniture' } ];

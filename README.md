@@ -27,6 +27,7 @@ Kumpulan tugas praktikum, latihan modul, dan dokumentasi pembelajaran.
 | Pertemuan | Materi | Tugas Praktikum | Status | Dokumentasi |
 | :---: | :--- | :--- | :---: | :--- |
 | **01** | JavaScript Dasar | Mini POS — Kasir Kantin dan latihan modul | ✅ Dikerjakan | [Pertemuan 1](ridhomaulanasaputra_124140090_pertemuan1/README.md) |
+| **02** | JavaScript Next Gen (ES6+) | Ruang Studi — Personal Dashboard, 12 demo, dan 22 latihan | ✅ Dikerjakan | [Pertemuan 2](ridhomaulanasaputra_124140090_pertemuan2/README.md) |
 
 Pertemuan berikutnya akan ditambahkan sebagai folder tersendiri ketika tugasnya dikerjakan.
 
@@ -37,23 +38,31 @@ Pertemuan berikutnya akan ditambahkan sebagai folder tersendiri ketika tugasnya 
 pemrograman_web_itera_124140090/
 ├── README.md
 ├── .gitignore
-└── ridhomaulanasaputra_124140090_pertemuan1/
+├── ridhomaulanasaputra_124140090_pertemuan1/
+|   ├── index.html
+|   ├── style.css
+|   ├── script.js
+|   ├── README.md
+|   ├── screenshots/
+|   │   ├── 01-form-utama.png
+|   │   ├── 02-validasi-error.png
+|   │   └── 03-hasil-perhitungan.png
+|   └── modul/
+|       ├── index.html
+|       ├── style.css
+|       ├── README.md
+|       ├── 01-variabel-kondisional/
+|       ├── 02-loop-fungsi/
+|       ├── 03-array-objek/
+|       └── 04-dom-api/
+└── ridhomaulanasaputra_124140090_pertemuan2/
     ├── index.html
-    ├── style.css
-    ├── script.js
     ├── README.md
+    ├── css/
+    ├── js/
+    ├── modul/
     ├── screenshots/
-    │   ├── 01-form-utama.png
-    │   ├── 02-validasi-error.png
-    │   └── 03-hasil-perhitungan.png
-    └── modul/
-        ├── index.html
-        ├── style.css
-        ├── README.md
-        ├── 01-variabel-kondisional/
-        ├── 02-loop-fungsi/
-        ├── 03-array-objek/
-        └── 04-dom-api/
+    └── tests/
 ```
 
 ---

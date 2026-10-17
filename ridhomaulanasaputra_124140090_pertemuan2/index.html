@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashboard tugas mahasiswa dengan penyimpanan lokal dan cuaca kampus.">
+  <title>Ruang Studi | Dashboard Ridho</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body class="dashboard">
+  <a class="skip-link" href="#main">Lewati navigasi</a>
+  <header class="sidebar">
+    <a class="brand" href="index.html"><span class="brand-mark">RS</span> Ruang Studi</a>
+    <nav aria-label="Navigasi utama"><a class="active" href="index.html" aria-current="page">Dashboard</a><a href="modul/index.html">Lab JavaScript <span aria-hidden="true">↗</span></a></nav>
+    <div class="profile"><span class="avatar">RM</span><div><strong>Ridho Maulana Saputra</strong><small>124140090 · Informatika ITERA</small></div></div>
+  </header>
+  <main id="main" class="main">
+    <header class="topbar"><span>RUANG STUDI <span class="muted">/ DASHBOARD</span></span><span id="today"></span></header>
+    <section class="welcome"><div><h1>Agenda kuliah.</h1><p class="muted">Tugas, tenggat, dan catatan belajar Ridho.</p></div><button id="add-task" class="button primary">+ Tambah tugas</button></section>
+    <section class="stats" aria-label="Ringkasan tugas"><div><span>Total tugas</span><strong id="stat-total">0</strong></div><div><span>Belum selesai</span><strong id="stat-pending">0</strong></div><div><span>Sudah selesai</span><strong id="stat-done">0</strong></div><div><span>Melewati deadline</span><strong id="stat-overdue">0</strong></div></section>
+    <div class="workspace"><section class="task-panel" aria-labelledby="task-heading">
+      <div class="section-heading"><h2 id="task-heading">Daftar tugas</h2><span id="task-count" class="count-label"></span></div>
+      <div class="toolbar"><label class="search"><span class="sr-only">Cari tugas atau mata kuliah</span><input id="search" type="search" placeholder="Cari tugas atau mata kuliah…"></label><label><span class="sr-only">Urutan tugas</span><select id="sort"><option value="deadline">Deadline terdekat</option><option value="priority">Prioritas tertinggi</option><option value="newest">Terbaru ditambahkan</option></select></label></div>
+      <div class="filters" role="group" aria-label="Filter status"><button data-filter="all" aria-pressed="true">Semua</button><button data-filter="pending" aria-pressed="false">Belum selesai</button><button data-filter="done" aria-pressed="false">Selesai</button></div>
+      <div id="task-list"></div>
+      <div id="empty-state" class="empty-state" hidden><span class="empty-symbol" aria-hidden="true">✓</span><h3 id="empty-title">Mulai rencana belajarmu</h3><p id="empty-description">Tambahkan tugas pertama atau gunakan data contoh untuk mencoba dashboard.</p><button id="sample-tasks" class="button secondary">Gunakan data contoh</button></div>
+    </section><aside class="right-panel">
+      <section class="progress-panel"><h2>Progres tugas</h2><div class="progress-number"><strong id="progress-percent">0%</strong><span>tugas selesai</span></div><progress id="progress" max="100" value="0" aria-label="Persentase tugas selesai"></progress><p id="progress-message">Satu tugas selesai adalah satu langkah maju.</p></section>
+      <section class="deadline-panel"><div class="section-heading"><h2>Deadline berikutnya</h2><span aria-hidden="true">↗</span></div><div id="next-deadline"></div></section>
+      <section class="weather-panel"><div class="section-heading"><div><p class="eyebrow">SEKITAR KAMPUS</p><h2>Cuaca ITERA</h2></div><button id="refresh-weather" class="text-button" aria-label="Muat ulang cuaca">↻</button></div><div id="weather" aria-live="polite"><p>Memuat cuaca…</p></div><small>Data Open-Meteo · Lampung Selatan</small></section>
+      <a class="lab-link" href="modul/index.html"><span>PRAKTIKUM PAW</span><strong>Lab JavaScript <span aria-hidden="true">↗</span></strong><small>Demo interaktif & latihan modul</small></a>
+    </aside></div>
+    <footer>Ruang Studi <span>Praktikum PAW · Ridho Maulana Saputra · Kelas RA</span></footer>
+  </main>
+  <dialog id="task-dialog" aria-labelledby="dialog-title"><form id="task-form" novalidate><div class="section-heading"><div><p class="eyebrow">RENCANA BELAJAR</p><h2 id="dialog-title">Tambah tugas</h2></div><button type="button" id="close-dialog" class="text-button" aria-label="Tutup form">×</button></div><input type="hidden" id="task-id"><label>Nama tugas<input id="title" name="title" maxlength="120" required placeholder="Contoh: Personal dashboard PAW"></label><label>Mata kuliah<input id="course" name="course" maxlength="80" required placeholder="Contoh: Pengembangan Aplikasi Web"></label><div class="form-grid"><label>Deadline<input id="deadline" name="deadline" type="date" required></label><label>Prioritas<select id="priority" name="priority"><option value="medium">Sedang</option><option value="high">Tinggi</option><option value="low">Rendah</option></select></label></div><label>Catatan <span class="muted">(opsional)</span><textarea id="notes" name="notes" rows="3" maxlength="500" placeholder="Apa yang perlu dikerjakan?"></textarea></label><p id="form-error" class="error" role="alert"></p><div class="form-actions"><button type="button" id="cancel-dialog" class="button secondary">Batal</button><button type="submit" class="button primary">Simpan tugas</button></div></form></dialog>
+  <dialog id="delete-dialog" aria-labelledby="delete-heading"><h2 id="delete-heading">Hapus tugas?</h2><p id="delete-description"></p><p class="muted">Tugas yang dihapus tidak dapat dikembalikan.</p><div class="form-actions"><button id="cancel-delete" class="button secondary">Batal</button><button id="confirm-delete" class="button danger">Hapus tugas</button></div></dialog>
+  <div id="toast" class="toast" role="status" hidden></div><noscript>Aplikasi ini memerlukan JavaScript. Aktifkan JavaScript pada browser.</noscript>
+</body></html>
