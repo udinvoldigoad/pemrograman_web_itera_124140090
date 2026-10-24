@@ -1,0 +1,30 @@
+.book-form {
+  background: white;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+.book-form h2 { margin-bottom: 1rem; font-size: 1.2rem; }
+.form-group { display: flex; flex-direction: column; margin-bottom: 0.9rem; }
+.form-group label { font-weight: 600; margin-bottom: 0.3rem; }
+.form-group input,
+.form-group select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.input-error { border-color: #ef4444 !important; background: #fef2f2; }
+.error-text { color: #ef4444; font-size: 0.85rem; margin-top: 0.25rem; }
+.form-actions { display: flex; gap: 0.5rem; }
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.btn-primary { background: #0284c7; color: white; border-color: #0284c7; }
+.btn-primary:hover { background: #0369a1; }
