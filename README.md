@@ -28,6 +28,7 @@ Kumpulan tugas praktikum, latihan modul, dan dokumentasi pembelajaran.
 | :---: | :--- | :--- | :---: | :--- |
 | **01** | JavaScript Dasar | Mini POS — Kasir Kantin dan latihan modul | ✅ Dikerjakan | [Pertemuan 1](ridhomaulanasaputra_124140090_pertemuan1/README.md) |
 | **02** | JavaScript Next Gen (ES6+) | Ruang Studi — Personal Dashboard, 12 demo, dan 22 latihan | ✅ Dikerjakan | [Pertemuan 2](ridhomaulanasaputra_124140090_pertemuan2/README.md) |
+| **03** | React Dasar | Aplikasi Manajemen Buku Pribadi (React + Vite, Context API, React Router, unit test) | ✅ Dikerjakan | [Pertemuan 3](ridhomaulanasaputra_124140090_pertemuan3/README.md) |
 
 Pertemuan berikutnya akan ditambahkan sebagai folder tersendiri ketika tugasnya dikerjakan.
 
@@ -55,14 +56,25 @@ pemrograman_web_itera_124140090/
 |       ├── 02-loop-fungsi/
 |       ├── 03-array-objek/
 |       └── 04-dom-api/
-└── ridhomaulanasaputra_124140090_pertemuan2/
+├── ridhomaulanasaputra_124140090_pertemuan2/
+|   ├── index.html
+|   ├── README.md
+|   ├── css/
+|   ├── js/
+|   ├── modul/
+|   ├── screenshots/
+|   └── tests/
+└── ridhomaulanasaputra_124140090_pertemuan3/
     ├── index.html
+    ├── package.json
     ├── README.md
-    ├── css/
-    ├── js/
-    ├── modul/
+    ├── public/
     ├── screenshots/
-    └── tests/
+    └── src/
+        ├── components/
+        ├── context/
+        ├── hooks/
+        └── pages/
 ```
 
 ---
