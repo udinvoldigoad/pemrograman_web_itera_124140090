@@ -29,8 +29,7 @@ Kumpulan tugas praktikum, latihan modul, dan dokumentasi pembelajaran.
 | **01** | JavaScript Dasar | Mini POS — Kasir Kantin dan latihan modul | ✅ Dikerjakan | [Pertemuan 1](ridhomaulanasaputra_124140090_pertemuan1/README.md) |
 | **02** | JavaScript Next Gen (ES6+) | Ruang Studi — Personal Dashboard, 12 demo, dan 22 latihan | ✅ Dikerjakan | [Pertemuan 2](ridhomaulanasaputra_124140090_pertemuan2/README.md) |
 | **03** | React Dasar | Aplikasi Manajemen Buku Pribadi (React + Vite, Context API, React Router, unit test) | ✅ Dikerjakan | [Pertemuan 3](ridhomaulanasaputra_124140090_pertemuan3/README.md) |
-
-Pertemuan berikutnya akan ditambahkan sebagai folder tersendiri ketika tugasnya dikerjakan.
+| **04** | Python Dasar | Latihan Python, penghitung BMI, pengelolaan nilai mahasiswa, dan modul matematika | ✅ Dikerjakan | [Pertemuan 4](ridhomaulanasaputra_124140090_pertemuan4/README.md) |
 
 
 ## 📂 Struktur Repository
@@ -65,16 +64,35 @@ pemrograman_web_itera_124140090/
 |   ├── screenshots/
 |   └── tests/
 └── ridhomaulanasaputra_124140090_pertemuan3/
-    ├── index.html
-    ├── package.json
+|   ├── index.html
+|   ├── package.json
+|   ├── README.md
+|   ├── public/
+|   ├── screenshots/
+|   └── src/
+|       ├── components/
+|       ├── context/
+|       ├── hooks/
+|       └── pages/
+└── ridhomaulanasaputra_124140090_pertemuan4/
+    ├── main.py
+    ├── math_operations.py
+    ├── tugas1_bmi.py
+    ├── tugas2_nilai_mahasiswa.py
     ├── README.md
-    ├── public/
-    ├── screenshots/
-    └── src/
-        ├── components/
-        ├── context/
-        ├── hooks/
-        └── pages/
+    ├── Latihan/
+    |   ├── latihan1.py
+    |   ├── latihan2_suhu.py
+    |   ├── latihan3_tebak.py
+    |   ├── latihan4_validasi.py
+    |   ├── latihan5_kontak.py
+    |   ├── main.py
+    |   └── password_gen.py
+    └── screenshots/
+        ├── soal1.png
+        ├── soal2.png
+        └── soal3.png
+
 ```
 
 ---
