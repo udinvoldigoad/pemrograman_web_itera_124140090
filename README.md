@@ -30,6 +30,7 @@ Kumpulan tugas praktikum, latihan modul, dan dokumentasi pembelajaran.
 | **02** | JavaScript Next Gen (ES6+) | Ruang Studi — Personal Dashboard, 12 demo, dan 22 latihan | ✅ Dikerjakan | [Pertemuan 2](ridhomaulanasaputra_124140090_pertemuan2/README.md) |
 | **03** | React Dasar | Aplikasi Manajemen Buku Pribadi (React + Vite, Context API, React Router, unit test) | ✅ Dikerjakan | [Pertemuan 3](ridhomaulanasaputra_124140090_pertemuan3/README.md) |
 | **04** | Python Dasar | Latihan Python, penghitung BMI, pengelolaan nilai mahasiswa, dan modul matematika | ✅ Dikerjakan | [Pertemuan 4](ridhomaulanasaputra_124140090_pertemuan4/README.md) |
+| **05** | Python OOP | Sistem Manajemen Perpustakaan, 7 latihan modul, dan 6 latihan mandiri | ✅ Dikerjakan | [Pertemuan 5](ridhomaulanasaputra_124140090_pertemuan5/README.md) |
 
 
 ## 📂 Struktur Repository
@@ -39,59 +40,86 @@ pemrograman_web_itera_124140090/
 ├── README.md
 ├── .gitignore
 ├── ridhomaulanasaputra_124140090_pertemuan1/
-|   ├── index.html
-|   ├── style.css
-|   ├── script.js
-|   ├── README.md
-|   ├── screenshots/
-|   │   ├── 01-form-utama.png
-|   │   ├── 02-validasi-error.png
-|   │   └── 03-hasil-perhitungan.png
-|   └── modul/
-|       ├── index.html
-|       ├── style.css
-|       ├── README.md
-|       ├── 01-variabel-kondisional/
-|       ├── 02-loop-fungsi/
-|       ├── 03-array-objek/
-|       └── 04-dom-api/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   ├── README.md
+│   ├── screenshots/
+│   │   ├── 01-form-utama.png
+│   │   ├── 02-validasi-error.png
+│   │   └── 03-hasil-perhitungan.png
+│   └── modul/
+│       ├── index.html
+│       ├── style.css
+│       ├── README.md
+│       ├── 01-variabel-kondisional/
+│       ├── 02-loop-fungsi/
+│       ├── 03-array-objek/
+│       └── 04-dom-api/
 ├── ridhomaulanasaputra_124140090_pertemuan2/
-|   ├── index.html
-|   ├── README.md
-|   ├── css/
-|   ├── js/
-|   ├── modul/
-|   ├── screenshots/
-|   └── tests/
-└── ridhomaulanasaputra_124140090_pertemuan3/
-|   ├── index.html
-|   ├── package.json
-|   ├── README.md
-|   ├── public/
-|   ├── screenshots/
-|   └── src/
-|       ├── components/
-|       ├── context/
-|       ├── hooks/
-|       └── pages/
-└── ridhomaulanasaputra_124140090_pertemuan4/
-    ├── main.py
-    ├── math_operations.py
-    ├── tugas1_bmi.py
-    ├── tugas2_nilai_mahasiswa.py
+│   ├── index.html
+│   ├── README.md
+│   ├── css/
+│   ├── js/
+│   ├── modul/
+│   ├── screenshots/
+│   └── tests/
+├── ridhomaulanasaputra_124140090_pertemuan3/
+│   ├── index.html
+│   ├── package.json
+│   ├── README.md
+│   ├── public/
+│   ├── screenshots/
+│   └── src/
+│       ├── components/
+│       ├── context/
+│       ├── hooks/
+│       └── pages/
+├── ridhomaulanasaputra_124140090_pertemuan4/
+│   ├── main.py
+│   ├── math_operations.py
+│   ├── tugas1_bmi.py
+│   ├── tugas2_nilai_mahasiswa.py
+│   ├── README.md
+│   ├── Latihan/
+│   │   ├── latihan1.py
+│   │   ├── latihan2_suhu.py
+│   │   ├── latihan3_tebak.py
+│   │   ├── latihan4_validasi.py
+│   │   ├── latihan5_kontak.py
+│   │   ├── main.py
+│   │   └── password_gen.py
+│   └── screenshots/
+│       ├── soal1.png
+│       ├── soal2.png
+│       └── soal3.png
+└── ridhomaulanasaputra_124140090_pertemuan5/
     ├── README.md
-    ├── Latihan/
-    |   ├── latihan1.py
-    |   ├── latihan2_suhu.py
-    |   ├── latihan3_tebak.py
-    |   ├── latihan4_validasi.py
-    |   ├── latihan5_kontak.py
-    |   ├── main.py
-    |   └── password_gen.py
+    ├── .gitignore
+    ├── latihan/
+    │   ├── 01_everything_is_object.py
+    │   ├── 01_procedural_vs_oop.py
+    │   ├── 02_class_object.py
+    │   ├── 03_inheritance.py
+    │   ├── 04_encapsulation.py
+    │   ├── 05_polymorphism.py
+    │   ├── 06_abstract_class.py
+    │   └── mandiri/
+    │       ├── latihan_buku.py
+    │       ├── latihan_karyawan.py
+    │       ├── latihan_notifikasi.py
+    │       ├── latihan_storage.py
+    │       ├── latihan_toko.py
+    │       └── latihan_truk.py
+    ├── tugas_perpustakaan/
+    │   ├── main.py
+    │   ├── library.py
+    │   ├── library_item.py
+    │   └── member.py
     └── screenshots/
-        ├── soal1.png
-        ├── soal2.png
-        └── soal3.png
+        ├── peminjaman-denda.png
+        ├── pencarian.png
+        └── tambah-katalog.png
 
 ```
 
